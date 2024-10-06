@@ -15,14 +15,15 @@
     <!-- Content -->
     <div class="container mt-5">
         <h2 class="text-center">Customer Feedback</h2>
-        <form class="p-4 border rounded shadow-sm">
+        <form class="p-4 border rounded shadow-sm" onsubmit="return submitForm()">
             <div class="mb-3">
-                <label for="feedbackTopic" class="form-label">Pilih Topik</label>
+                <label for="feedbackTopic" class="form-label">Pilih Liquid</label>
                 <select class="form-select" id="feedbackTopic" required>
-                    <option value="">Pilih Topik</option>
-                    <option value="Pelayanan">Pelayanan</option>
-                    <option value="Produk">Produk</option>
-                    <option value="Lainnya">Lainnya</option>
+                    <option value="">Pilih Liquid</option>
+                    <option value="Creamy">Creamy</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Bread/Cake">Bread/Cake</option>
+                    <option value="Juice">Juice</option>
                 </select>
             </div>
 
@@ -31,8 +32,16 @@
                 <textarea class="form-control" id="feedbackDetail" rows="4" placeholder="Masukkan detail feedback Anda" required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" onclick="window.location.href='5.html'">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+
+    <script>
+        function submitForm() {
+            // Perform any validation or processing here if needed
+            window.location.href = '5.html'; // Redirect to 5.html
+            return false; // Prevent default form submission
+        }
+    </script>
 </body>
 </html>

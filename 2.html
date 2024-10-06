@@ -15,7 +15,7 @@
     <!-- Content -->
     <div class="container mt-5">
         <h2 class="text-center">LQStore</h2>
-        <form class="p-4 border rounded shadow-sm">
+        <form class="p-4 border rounded shadow-sm" onsubmit="return submitForm()">
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
@@ -24,8 +24,16 @@
                 <label for="email" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
             </div>
-            <button type="submit" class="btn btn-primary w-100" onclick="window.location.href='3.html'">Daftar</button>
+            <button type="submit" class="btn btn-primary w-100">Daftar</button>
         </form>
     </div>
+
+    <script>
+        function submitForm() {
+            // Perform any validation or processing here if needed
+            window.location.href = '3.html'; // Redirect to 2.html
+            return false; // Prevent default form submission
+        }
+    </script>
 </body>
 </html>
